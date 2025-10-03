@@ -1,0 +1,123 @@
+<form #cineForm="ngForm">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="text-center">Cinepolis</h2>
+      </div>
+      
+      <div class="card-body">
+        <!-- Datos del comprador -->
+        <div class="form-group mb-3">
+          <label for="nombre" class="form-label">Nombre del comprador</label>
+          <input
+            name="nombre"
+            type="text"
+            class="form-control"
+            id="nombre"
+            placeholder="Ingresa tu nombre"
+            [(ngModel)]="nombre"
+            required
+          />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="cantidadCompradores" class="form-label">Cantidad de compradores</label>
+          <input
+            name="cantidadCompradores"
+            type="number"
+            class="form-control"
+            id="cantidadCompradores"
+            placeholder="Número de compradores"
+            [(ngModel)]="Compradores"
+            min="1"
+            required
+          />
+        </div>
+
+        <!-- Tarjeta Cineco -->
+        <div class="form-group mb-3">
+          <label class="form-label">¿Cuentas con tarjeta CINECO?</label>
+          <div class="form-check">
+            <input 
+              class="form-check-input" 
+              type="radio" 
+              name="tarjetaC" 
+              id="tarjetaSi" 
+              value="si"
+              [(ngModel)]="tarjetaC"
+            >
+            <label class="form-check-label" for="tarjetaSi">
+              Sí
+            </label>
+          </div>
+          <div class="form-check">
+            <input 
+              class="form-check-input" 
+              type="radio" 
+              name="tarjetaC" 
+              id="tarjetaNo" 
+              value="no"
+              [(ngModel)]="tarjetaC"
+            >
+            <label class="form-check-label" for="tarjetaNo">
+              No
+            </label>
+          </div>
+        </div>
+
+        <!-- Cantidad de boletos -->
+        <div class="form-group mb-3">
+          <label for="boletos" class="form-label">Cantidad de boletos</label>
+          <input
+            name="boletos"
+            type="number"
+            class="form-control"
+            id="boletos"
+            placeholder="Número de boletos"
+            [(ngModel)]="boletos"
+            min="1"
+            required
+          />
+          <div class="form-text">Máximo 7 boletos por comprador</div>
+        </div>
+
+        <!-- Mensajes de error -->
+        <div *ngIf="mensajeError" class="alert alert-danger">
+          {{ mensajeError }}
+        </div>
+
+        <!-- Resultado -->
+        <div *ngIf="total > 0" class="resultado mt-4">
+          <h3 class="text-center">Resumen de compra</h3>
+          <div class="alert alert-success">
+            <h4 class="text-center">Total a pagar: ${{ total.toFixed(2) }}</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones -->
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-6">
+            <button 
+              type="button" 
+              class="btn btn-primary w-100" 
+              (click)="calcular()"
+            >
+              Calcular Total
+            </button>
+          </div>
+          <div class="col-6">
+            <button 
+              type="button" 
+              class="btn btn-secondary w-100" 
+              (click)="limpiar()"
+            >
+              Limpiar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

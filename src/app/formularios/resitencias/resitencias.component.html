@@ -1,0 +1,178 @@
+<form #resisForm="ngForm">
+  <div class="container-resistencia">
+    <!-- Columna 1 -->
+    <div class="columna">
+      <div class="titulo">1ra. Banda</div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="0" [(ngModel)]="model.banda1">
+        <span class="color negro"></span> 0
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="1" [(ngModel)]="model.banda1">
+        <span class="color marron"></span> 1
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="2" [(ngModel)]="model.banda1">
+        <span class="color rojo"></span> 2
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="3" [(ngModel)]="model.banda1">
+        <span class="color naranja"></span> 3
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="4" [(ngModel)]="model.banda1">
+        <span class="color amarillo"></span> 4
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="5" [(ngModel)]="model.banda1">
+        <span class="color verde"></span> 5
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="6" [(ngModel)]="model.banda1">
+        <span class="color azul"></span> 6
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="7" [(ngModel)]="model.banda1">
+        <span class="color violeta"></span> 7
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="8" [(ngModel)]="model.banda1">
+        <span class="color gris"></span> 8
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda1" value="9" [(ngModel)]="model.banda1">
+        <span class="color blanco"></span> 9
+      </div>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="columna">
+      <div class="titulo">2da. Banda</div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="0" [(ngModel)]="model.banda2">
+        <span class="color negro"></span> 0
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="1" [(ngModel)]="model.banda2">
+        <span class="color marron"></span> 1
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="2" [(ngModel)]="model.banda2">
+        <span class="color rojo"></span> 2
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="3" [(ngModel)]="model.banda2">
+        <span class="color naranja"></span> 3
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="4" [(ngModel)]="model.banda2">
+        <span class="color amarillo"></span> 4
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="5" [(ngModel)]="model.banda2">
+        <span class="color verde"></span> 5
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="6" [(ngModel)]="model.banda2">
+        <span class="color azul"></span> 6
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="7" [(ngModel)]="model.banda2">
+        <span class="color violeta"></span> 7
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="8" [(ngModel)]="model.banda2">
+        <span class="color gris"></span> 8
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda2" value="9" [(ngModel)]="model.banda2">
+        <span class="color blanco"></span> 9
+      </div>
+    </div>
+
+    <!-- Columna 3 -->
+    <div class="columna">
+      <div class="titulo">3ra. Banda Multiplicador</div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="1" [(ngModel)]="model.banda3">
+        <span class="color negro"></span> x1
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="10" [(ngModel)]="model.banda3">
+        <span class="color marron"></span> x10
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="100" [(ngModel)]="model.banda3">
+        <span class="color rojo"></span> x100
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="1000" [(ngModel)]="model.banda3">
+        <span class="color naranja"></span> x1000
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="10000" [(ngModel)]="model.banda3">
+        <span class="color amarillo"></span> x10000
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="100000" [(ngModel)]="model.banda3">
+        <span class="color verde"></span> x100000
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="1000000" [(ngModel)]="model.banda3">
+        <span class="color azul"></span> x1000000
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="10000000" [(ngModel)]="model.banda3">
+        <span class="color violeta"></span> x10000000
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="100000000" [(ngModel)]="model.banda3">
+        <span class="color gris"></span> x100000000
+      </div>
+      <div class="fila">
+        <input type="radio" name="banda3" value="1000000000" [(ngModel)]="model.banda3">
+        <span class="color blanco"></span> x1000000000
+      </div>
+    </div>
+  </div>
+
+  <!-- Tolerancia -->
+  <div class="columna">
+      <div class="titulo">Tolerancia</div>
+      <div class="fila" *ngFor="let item of [
+        {valor:'5', label:'5%', clase:'dorado'},
+        {valor:'10', label:'10%', clase:'plata'}
+      ]">
+        <input type="radio" name="banda4" [(ngModel)]="model.banda4" [value]="item.valor">
+        <span class="color {{item.clase}}"></span> {{item.label}}
+      </div>
+    </div>
+
+    <div class="acciones">
+    <button (click)="calcular()">Calcular</button>
+    </div>
+
+  <!-- Tabla de resultados -->
+  <div *ngIf="model.valorNominal > 0">
+    <table>
+      <tr>
+        <th>Color1</th>
+        <th>Color2</th>
+        <th>Multiplicador</th>
+        <th>Tolerancia</th>
+        <th>Valor</th>
+        <th>Valor máximo</th>
+        <th>Valor mínimo</th>
+      </tr>
+      <tr>
+        <td [class]="getColorClass(model.banda1)">{{model.banda1}}</td>
+        <td [class]="getColorClass(model.banda2)">{{model.banda2}}</td>
+        <td [class]="getColorClass(model.banda3)">{{model.banda3}}</td>
+        <td [class]="getColorClass(model.banda4 + '-')">{{model.banda4}}%</td>
+        <td>{{model.valorNominal}}</td>
+        <td>{{model.valorMaximo}}</td>
+        <td>{{model.valorMinimo}}</td>
+      </tr>
+    </table>
+  </div>
+</form>

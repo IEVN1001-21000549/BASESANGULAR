@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({//Decorador
   selector: 'app-root',//llamar a los componetes
   templateUrl: './app.component.html',//invocar al archivo
-  standalone: false,//standalone 
+  standalone: false,//standlone 
   styleUrl: './app.component.css'//hace referencia a la hoja de estilos
 })
 export class AppComponent {

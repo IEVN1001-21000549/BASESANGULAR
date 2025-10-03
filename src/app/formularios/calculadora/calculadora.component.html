@@ -1,0 +1,27 @@
+<div class="container">
+  
+  <div class="formulario">
+    
+    <form>
+      <label for="x1">X1:</label>
+      <input type="number" [(ngModel)]="x1" name="x1">
+
+      <label for="y1">Y1:</label>
+      <input type="number" [(ngModel)]="y1" name="y1">
+
+      <label for="x2">X2:</label>
+      <input type="number" [(ngModel)]="x2" name="x2">
+
+      <label for="y2">Y2:</label>
+      <input type="number" [(ngModel)]="y2" name="y2">
+
+      <br>
+      <button type="button" (click)="calcular()">CALCULAR</button>
+    </form>
+  </div>
+
+  
+  <div class="resultado">
+    La distancia entre los dos puntos es: {{ resultado }}
+  </div>
+</div>
